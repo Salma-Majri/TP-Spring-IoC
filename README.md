@@ -44,3 +44,15 @@ Pour prouver la flexibilité de l'instanciation dynamique, j'ai créé une class
 
 ##### **Résultat console :**
 ![Résultat Injection Dynamique](screenshots/pres2_v2.png)
+
+
+
+### 5.c. En utilisant le Framework Spring - Version XML
+
+Dans cette étape, nous avons délégué la gestion de l'instanciation et de l'injection des dépendances au conteneur IoC de Spring.
+
+#### 1. Configuration des dépendances (pom.xml)
+Nous avons ajouté les dépendances `spring-core` et `spring-context` pour pouvoir utiliser le framework.
+
+#### 2. Fichier de configuration (config.xml)
+Le fichier `config.xml` définit les beans et gère l'injection via la balise `<property>`
