@@ -22,4 +22,25 @@ L'application est structurée autour de deux interfaces principales :
 ## Partie 1 : Création des Interfaces et Implémentations
 - Mise en place de l'interface `IDao` et son implémentation `DaoImpl`.
 - Mise en place de l'interface `IMetier` et son implémentation `MetierImpl`.
-- Application du **couplage faible** : la classe métier communique avec la couche DAO via une interface.
+- Application du **couplage faible** : la classe métier communique avec la couche DAO via u## 4. Tests et Résultats
+
+### 5.1. Faire l'injection des dépendances :
+### a. Par instanciation statique
+Tester l'injection statique en créant la classe `Pres1`:
+##### **Résultat console :**
+
+![Résultat Injection Statique](screenshots/pres1.png)
+
+
+### b. Par instanciation dynamique
+Cette méthode permet de rendre l'application fermée à la modification mais ouverte à l'extension. L'instanciation se fait via la **Réflexion Java** en lisant les noms des classes depuis un fichier `config.txt`.
+
+##### **Résultat console :**
+![Résultat Injection Dynamique](screenshots/pres2.png)
+
+
+### 5.b. Test avec une deuxième implémentation (DaoImpl2)
+Pour prouver la flexibilité de l'instanciation dynamique, j'ai créé une classe `DaoImpl2` dans le package `ext`.
+
+##### **Résultat console :**
+![Résultat Injection Dynamique](screenshots/pres2_V2.png)
