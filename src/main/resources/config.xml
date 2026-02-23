@@ -7,9 +7,10 @@
     </bean>
 
     <bean id="metier" class="metier.MetierImpl">
-        <property name="dao" ref="d">
+          <constructor-arg ref="d">
 
-        </property>
+
+          </constructor-arg>
     </bean>
 
 </beans>
