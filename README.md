@@ -37,10 +37,10 @@ Cette méthode permet de rendre l'application fermée à la modification mais ou
 
 ##### **Résultat console :**
 ![Résultat Injection Dynamique](screenshots/pres2.png)
-
+![Résultat Injection Dynamique](screenshots/pres2_metier.png)
 
 ### 5.b. Test avec une deuxième implémentation (DaoImpl2)
 Pour prouver la flexibilité de l'instanciation dynamique, j'ai créé une classe `DaoImpl2` dans le package `ext`.
 
 ##### **Résultat console :**
-![Résultat Injection Dynamique](screenshots/pres2_V2.png)
+![Résultat Injection Dynamique](screenshots/pres2_v2.png)
