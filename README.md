@@ -47,7 +47,8 @@ Pour prouver la flexibilité de l'instanciation dynamique, j'ai créé une class
 
 
 
-### 5.c. En utilisant le Framework Spring - Version XML
+### 5.c. En utilisant le Framework Spring 
+#### Version XML
 
 Dans cette étape, nous avons délégué la gestion de l'instanciation et de l'injection des dépendances au conteneur IoC de Spring.
 
@@ -56,3 +57,20 @@ Nous avons ajouté les dépendances `spring-core` et `spring-context` pour pouvo
 
 #### 2. Fichier de configuration (config.xml)
 Le fichier `config.xml` définit les beans et gère l'injection via la balise `<property>`
+
+#### Version Annotations
+Utilisation des annotations pour une configuration plus légère et moderne :
+* **@Component** : Pour déclarer les Beans.
+* **@Autowired** : Pour l'injection automatique.
+
+---
+
+## 3. Problématique d'Ambiguité (Gestion des Erreurs)
+
+Lors de l'utilisation de la version Annotations, si deux classes implémentent la même interface (ex: `DaoImpl` et `DaoImplV2`) et sont marquées avec `@Component`, Spring génère l'erreur suivante :
+
+![Erreur Ambiguité](screenshots/Erreur_Ambiguité.png)
+
+### Solution
+Pour résoudre ce conflit, nous avons utilisé :
+2.  **@Qualifier("nomBean")** : Pour spécifier exactement quel Bean injecter.
